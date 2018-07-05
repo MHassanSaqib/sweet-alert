@@ -46,21 +46,21 @@ class SweetAlertNotifier
     /**
      * Display an alert message with a text and an optional title.
      *
-     * By default the alert is not typed.
+     * By default the alert is not typed (iconed).
      *
      * @param string $text
-     * @param string $type
+     * @param string $icon
      * @param string $title
      *
      * @return \UxWeb\SweetAlert\SweetAlertNotifier $this
      */
-    public function message($text, $title = '', $type = null)
+    public function message($text, $title = '', $icon = null)
     {
         $this->config['text'] = $text;
         $this->config['title'] = $title;
 
-        if (!is_null($type)) {
-            $this->config['type'] = $type;
+        if (!is_null($icon)) {
+            $this->config['icon'] = $icon;
         }
 
         $this->flashConfig();
